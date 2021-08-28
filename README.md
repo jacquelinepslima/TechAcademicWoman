@@ -1,2 +1,5 @@
 # Capgemini-techAcademicWoman
-Esse projeto irá servir para a capacitação da Turma C de Desenvolvedoras da Capgemini
+
+Nesse repositório estarão todos os exercícios propostos durante a capacitação da Turma de Desenvolvedoras da Capgemini;
+
+Linguagens utilizadas: JAVA e Angular;
