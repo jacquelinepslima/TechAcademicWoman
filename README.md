@@ -2,4 +2,4 @@
 
 Nesse repositório estarão todos os exercícios propostos durante a capacitação da Turma de Desenvolvedoras da Capgemini;
 
-Linguagens utilizada: JAVA;
+Linguagem utilizada: JAVA;
