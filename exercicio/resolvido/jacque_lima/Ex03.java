@@ -1,4 +1,4 @@
-package exercicio.resolvido.natasha_busnardo;
+package exercicio.resolvido.jacque_lima;
 
 import java.util.Scanner;
 

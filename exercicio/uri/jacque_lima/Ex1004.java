@@ -1,4 +1,4 @@
-package exercicio.uri.natasha_busnardo;
+package exercicio.uri.jacque_lima;
 
 import java.util.Scanner;
 
