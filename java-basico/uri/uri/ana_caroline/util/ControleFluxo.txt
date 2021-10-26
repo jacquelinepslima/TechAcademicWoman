@@ -1,0 +1,76 @@
+
+        /* Operadores de comparacao
+
+          == igual
+          <= menor ou igual
+          >= maior ou igual
+          != diferente
+
+        *
+        * */
+
+        //     Expressoes logicas
+        // toda condicao (IF | ELSE IF | ELSE) sao booleanos
+
+        //Operador E | AND | &&
+
+        x = 5
+                     TRUE E FALSE
+                (20 < X) E (20 == x) ==> FALSE;
+
+                    FALSE E ----
+                (20 < 10) E (20 == 10) ==> FALSE;
+
+                     TRUE E TRUE
+                (20 < 40) E (20 == 20) ==> TRUE;
+
+                     TRUE E TRUE
+                (x<= 20) E (x!= 3) ==> TRUE;
+
+        //Operador OU | OR | ||
+
+             (FALSO) OU (VERDADEIRO) ==> VERDADEIRO;
+
+                   TRUE E FALSE
+                (x == 10) OU (x!= 3) ==> TRUE;
+
+
+        ### Controle de fluxo
+
+            Sintaxe simples
+
+            if (condicao) { --> se a condicao for true executa os comando dentro do { }
+                executa os comandos
+                executa os comandos
+                executa os comandos
+            }
+
+            Composta
+
+             if (condicao) { --> se a condicao for true executa os comando dentro do { }
+                 executa os comandos
+                 executa os comandos
+                 executa os comandos
+             } else if(condica) { --> se a condicao for true executa os comando dentro do { }
+                executa os comandos
+             } else{ --> se a condicao for falsa executa o bloco { } do else
+                executa os comandos
+             }
+
+        ### Sintaxe encadeando if else { if e else }
+
+            if (condicao) e (condicao){ --> se a condicao for true executa os comando dentro do { }
+                executa os comandos
+                executa os comandos
+                executa os comandos
+
+            } else {  --> se a condicao for falsa executa o bloco { } do else
+
+                if(condicao) { --> se a condicao for true executa os comando dentro do { }
+                    executa os comandos
+
+                } else { --> se a condicao for falsa executa o bloco { } do else
+                    executa os comandos
+                }
+
+            }
