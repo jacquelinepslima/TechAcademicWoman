@@ -1,20 +1,29 @@
-const transactionsUl = document.querySelector("#transactions");
-const inputTransactionName = document.querySelector("#text");
-const inputTransactionAmount = document.querySelector("#amount");
+const transactionsUl = document.querySelector('#transactions');
+const inputTransactionName = document.querySelector('#text');
+const inputTransactionAmount = document.querySelector('#amount');
+const balanceDisplay = document.querySelector('#balance');
+const incomeDisplay = document.querySelector('#money-plus');
+const expensesDisplay = document.querySelector('#money-minus');
 
 // objeto literal ficticio
 let dummyTransactions = [
     { id: 1, name: "Bolo de brigadeiro", amount: -20 },
-    { id: 2, name: "Salario", amount: 300 },
+    { id: 2, name: "Salario", amount: 100000 },
     { id: 3, name: "Torta de frango", amount: -10 },
     { id: 4, name: "Violão", amount: 150 },
+    {id: 5, name: 'PC Gamer', amount: -8000}
   ];
+
+  //gerador de id numero aleatorio
+
+  const geradorID = () => Math.round(Math.random() * 1000);
+
 
 const addTransactionInArray = (transactionName, transactionAmount) => {
     dummyTransactions.push ({
-        id: 123, //AINDA ESTA FIXO PQ NAO TEMOS UM GERADOR DE ID
+        id: geradorID(), //AINDA ESTA FIXO PQ NAO TEMOS UM GERADOR DE ID
         name: transactionName,
-        amount: transactionAmount
+        amount: Number(transactionAmount)
     })
 }
 
@@ -27,7 +36,7 @@ const handleFormSubmit = event => {
     alert("Informe a descrição e o valor da transação");
     return;
   }
-  addTransactionInArray(inputTransactionName.value, inputTransactionAmount.value);
+  addTransactionInArray(inputTransactionName.value, (inputTransactionAmount.value));
   init();
 };
 
@@ -35,10 +44,14 @@ form.addEventListener('submit', handleFormSubmit);
 
 
 // é o parametro da funcao
-const addTransactionIntoDOM = (trasaction) => {
-  const li = document.createElement("li");
+const addTransactionIntoDOM = transaction => {
+  const li = document.createElement('li');
 
-  li.innerHTML = `${trasaction.name}`;
+  li.innerHTML = `
+                  ${transaction.name}
+                  <span> R$ ${transaction.amount}</span>
+                  <button onClick="removeTransaction(${transaction.id})">X</button>
+                  `
   //atribuindo um nó para o li
   transactionsUl.append(li);
 };
@@ -66,7 +79,20 @@ const updateBalanceValues = () => {
                     .filter(value => value < 0)
                     .reduce((accumulator, transaction) =>  accumulator + transaction,0);
                     console.log('Soma dos valores negativos: ' + expenses);
-}       
+
+    //jogar os valores pegados no html
+    balanceDisplay.textContent = `R$ ${total}`;
+    incomeDisplay.textContent = `R$ ${income}`;
+    expensesDisplay.textContent = `R$ ${expenses}`;
+} 
+
+// remover produtos
+
+const removeTransaction = ID =>{
+  dummyTransactions = dummyTransactions.filter(transaction => transaction.id !== ID);
+  console.log(dummyTransactions);
+  init();
+}
 
 const init = () => {
     // aqui iremos fazer um tratamento a nivel de codigo para nao 
