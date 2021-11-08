@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ApiControleDespesaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ApiControleDespesaApplication.class, args);
+			SpringApplication.run(ApiControleDespesaApplication.class, args);
 	}
-
 }
