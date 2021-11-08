@@ -6,13 +6,7 @@ const incomeDisplay = document.querySelector('#money-plus');
 const expensesDisplay = document.querySelector('#money-minus');
 
 // objeto literal ficticio
-let dummyTransactions = [
-    { id: 1, name: "Bolo de brigadeiro", amount: -20 },
-    { id: 2, name: "Salario", amount: 100000 },
-    { id: 3, name: "Torta de frango", amount: -10 },
-    { id: 4, name: "Violão", amount: 150 },
-    {id: 5, name: 'PC Gamer', amount: -8000}
-  ];
+let dummyTransactions = [];
 
   //gerador de id numero aleatorio
 
@@ -38,7 +32,13 @@ const handleFormSubmit = event => {
   }
   addTransactionInArray(inputTransactionName.value, (inputTransactionAmount.value));
   init();
-};
+  cleanInputs();
+}
+
+const cleanInputs = () =>{
+  inputTransactionName.value = '';
+  inputTransactionAmount.value = '';
+}
 
 form.addEventListener('submit', handleFormSubmit);
 
@@ -46,11 +46,16 @@ form.addEventListener('submit', handleFormSubmit);
 // é o parametro da funcao
 const addTransactionIntoDOM = transaction => {
   const li = document.createElement('li');
+  //condicao na linha ou if ternario
+  const operator = transaction.amount < 0 ? '-' : '+';
+  const amountWithoutOperator = Math.abs(transaction.amount);
+  const CssClass = transaction.amount < 0 ? 'minus' : 'plus';
+
 
   li.innerHTML = `
                   ${transaction.name}
                   <span> R$ ${transaction.amount}</span>
-                  <button onClick="removeTransaction(${transaction.id})">X</button>
+                  <button class="delete-btn" onClick="removeTransaction(${transaction.id})">X</button>
                   `
   //atribuindo um nó para o li
   transactionsUl.append(li);
