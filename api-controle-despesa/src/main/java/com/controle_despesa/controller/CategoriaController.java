@@ -2,10 +2,12 @@ package com.controle_despesa.controller;
 
 import com.controle_despesa.model.dto.CategoriaDTO;
 import com.controle_despesa.model.entity.Categoria;
+import com.controle_despesa.model.form.CategoriaFORM;
 import com.controle_despesa.model.repositories.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -22,8 +24,9 @@ public class CategoriaController {
     }
 
     @PostMapping
-    public void salvar(@RequestBody Categoria categoria){
-        repository.save(categoria);
+    public void salvar(@RequestBody @Valid CategoriaFORM categoriaForm){
+        Categoria cs = categoriaForm.converter(repository);
+        repository.save(cs);
     }
 
     @DeleteMapping("/{id}")
