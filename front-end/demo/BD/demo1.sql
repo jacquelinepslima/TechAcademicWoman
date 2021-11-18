@@ -7,5 +7,4 @@ create table Pessoa(
 	sobrenome varchar(100)
 );
 
-insert into Pessoa values(null, 'Jacqueline', 'Lima');
-
+insert into Pessoa values(null, 'Jacqueline', 'Lima'), (null, 'Alicio', 'Cunha');
