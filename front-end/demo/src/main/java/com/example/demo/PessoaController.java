@@ -36,4 +36,15 @@ public class PessoaController {
         return null;
     }
 
+    @PutMapping("/{id}")
+    public void update(Long id, Pessoa p){
+
+        Pessoa pessoaPesquisado = pessoaRepository.getById(id);
+
+        if(pessoaPesquisado != null){
+            pessoaPesquisado.setNome(pessoaPesquisado.getNome());
+            pessoaRepository.save(pessoaPesquisado);
+        }
+    }
+
 }
