@@ -7,14 +7,14 @@
           <form action="">
               <div class="form-group">
                   <label for="">Nome</label>
-                  <input type="text" class="form-control" name="nome" >
+                  <input [(ngModel)]="pessoa.nome" type="text" class="form-control" name="nome" >
               </div>
 
               <div class="form-group">
                   <label for="">Sobrenome</label>
-                  <input type="text" class="form-control" name="sobrenome">
+                  <input [(ngModel)]="pessoa.sobrenome" type="text" class="form-control" name="sobrenome">
               </div>
-              <button class="btn btn-danger">Salvar</button>
+              <button (click)="atualizarPessoa()" class="btn btn-danger">Salvar</button>
           </form>
       </div>
   </div>

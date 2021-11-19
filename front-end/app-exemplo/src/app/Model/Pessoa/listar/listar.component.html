@@ -21,7 +21,7 @@
             <td>{{ pessoa.sobrenome }}</td>
             <td>
               <!-- <button (click)="editar(pessoa.id)" routerLink="/editar">editar</button> -->
-              <button [routerLink]="['/editar', pessoa.id]">editar</button>
+              <button [routerLink]="['/editar', pessoa.id]" (click)="editar(pessoa.id)">editar</button>
               <button>excluir</button>
             </td>
           </tr>
