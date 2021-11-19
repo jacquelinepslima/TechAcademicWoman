@@ -1,8 +1,10 @@
-package com.example.demo;
+package com.example.demo.model.controller;
 
 
 
-import com.example.demo.model.Pessoa;
+import com.example.demo.model.entity.Pessoa;
+import com.example.demo.model.dto.PessoaDTO;
+import com.example.demo.model.repository.PessoaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

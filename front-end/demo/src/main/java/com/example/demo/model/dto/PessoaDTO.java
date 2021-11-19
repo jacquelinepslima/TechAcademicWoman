@@ -1,6 +1,6 @@
-package com.example.demo;
+package com.example.demo.model.dto;
 
-import com.example.demo.model.Pessoa;
+import com.example.demo.model.entity.Pessoa;
 import lombok.Getter;
 
 import java.util.List;
