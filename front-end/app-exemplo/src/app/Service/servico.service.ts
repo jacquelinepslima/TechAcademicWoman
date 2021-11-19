@@ -19,7 +19,7 @@ export class ServicoService {
     return this.http.post<Pessoa>(this.urlBase, pessoa);
   }
 
-  getPessoaById(id: Number){
+  getPessoaById(id: any){
     return this.http.get<Pessoa>(this.urlBase+"/"+id);
   }
 

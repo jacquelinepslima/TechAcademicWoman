@@ -17,4 +17,8 @@ export class ListarComponent implements OnInit{
         this.listaPessoa = data;
       })
     }
+
+    editar(id: any): void{
+      localStorage.setItem("id", id.toString());
+    }
 }
