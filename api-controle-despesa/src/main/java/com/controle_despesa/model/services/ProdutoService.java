@@ -17,5 +17,8 @@ public class ProdutoService {
         repository.save(produtoExcluir);
     }
 
+    public Produto findById(Long id){
+        return repository.findById(id).orElseThrow();
+    }
 
 }

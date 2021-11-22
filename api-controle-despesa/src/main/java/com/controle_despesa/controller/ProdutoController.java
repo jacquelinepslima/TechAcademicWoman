@@ -6,6 +6,7 @@ import com.controle_despesa.model.entity.Produto;
 import com.controle_despesa.model.repositories.ProdutoRepository;
 import com.controle_despesa.model.services.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/produto")
 public class ProdutoController {
+
     @Autowired //injecao de dependencia
     private ProdutoRepository repository;
     private ProdutoService service;
@@ -45,5 +47,11 @@ public class ProdutoController {
     @PatchMapping("/{id}")
     public void inativar(@PathVariable Long id){
         service.inativar(id);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Produto> findById(@PathVariable Long id){
+        Produto produto = service.findById(id);
+        return ResponseEntity.ok().body(produto);
     }
 }
