@@ -1,0 +1,102 @@
+package exercicio.uri.jacque_lima.util;
+
+import java.security.KeyStore;
+
+public class ControleFluxo {
+    public static void main(String[] args) {
+
+        /*
+        Operadores de comparacao
+
+        == igual
+        <= menor ou igual
+        >= maior ou igual
+        != diferente
+
+         */
+        //                  Expressoes logicas
+        // toda a condicao IF | ELSE IF | ELSE sao booleanos
+        // operador  E | AND | &&
+
+        x = 40
+                TRUE E FALSE
+                (20 < x) E (20 = x) ==> FALSE;
+
+                FALSE    E
+                (20 < 10) E (20 = 10) ==> FALSE;
+
+                TRUE E TRUE
+                (20 < 40) E (20 = 20) ==> TRUE;
+
+                // operador OU | OR |    ||
+
+        (FALSE) OU (TRUE) ==> TRUE;
+        (X == 10) OU (x != 3) ==> true;
+
+        // operadores OU e E juntos nas condicoes
+
+        (verdadeiro) e (verdadeiro)e (falso) e (verdadeiro) ==>  falso;
+
+        verdadeiro           ou     falso
+                ((verdadeiro) e (verdadeiro)) ou ((falso) e (verdadeiro)) ==>  verdadeiro;
+
+
+                ### CONTROLE DE FLUXO
+
+                Sintaxe simples
+
+                Executa sem verificar condicao
+                comandos
+                comandos
+                comandos
+
+                verdadeiro e verdadeiro
+                if(condicao) e (condicao) { --> se a condicao for true executa os comandos dentro do {}
+                executa os comandos
+                executa os comandos
+                executa os comandos
+
+
+                Executa sem verificar condicao
+                                comandos
+                                comandos
+                                comandos
+
+                ### Sintaxe composto
+                falso
+                if(condicao) { --> se a condicao for true executa os comandos dentro do {}
+                executa os comandos
+                executa os comandos
+                executa os comandos
+                }else{ --> se a condicao for false o bloco de comando do else {}
+                                executa os comandos
+                }
+
+
+                ### Sintaxe encadeando varios if else if e else
+
+               falso
+               if(condicao) e (condicao){ --> se a condicao for true executa os comandos dentro do {}
+               executa os comandos
+               executa os comandos
+               executa os comandos
+               }else if(condicao) e (condicao){ --> se a condicao for true executa os comandos dentro do {}
+               executa os comandos
+               executa os comandos
+               }else --> se a condicao for false o bloco de comando do else {}
+                               executa os comandos
+               }
+
+               ### Sintaxe encadeando if else {if e else}
+
+               if(condicao) e (condicao) { --> se a condicao for true executa os comandos dentro do { }
+                executa os comandos
+                executa os comandos
+               }else{ --> se a condicao for false executa o bloco de comandos do else { }
+                if(condicao){ --> se a condicao for true executa os comandos dentro do { }
+                    executa os comandos
+                }else{ --> se a condicao for false executa o bloco de comando do else { }
+                    executa os comandos
+                }
+
+                }

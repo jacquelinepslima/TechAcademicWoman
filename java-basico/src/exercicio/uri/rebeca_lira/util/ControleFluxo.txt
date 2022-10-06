@@ -1,0 +1,93 @@
+package exercicio.uri.rebeca_lira.util;
+
+public class ControleFluxo {
+    public static void main(String[] args) {
+
+        /* Operadores de comparação
+        == IGUAL
+        <= MENOR E IGUAL
+        >= MAIOR E IGUAL
+        != DIFERENTE
+        */
+
+        // toda convição (IF / ELSE) são booleanos
+        // E / AND / &&
+
+        x = 5;
+        TRUE E FALSE
+        (20<x) E (20=x) ==> FALSE;
+
+        FALSE E ----
+        (20<10) E (20=10) ==> FALSE;
+
+        TRUE E TRUE
+        (20<40) E (20=20) ==> TRUE;
+
+        true e true
+        (x<=20) e (x!=3) ==> true;
+
+        // Operador OU / OR
+
+        (FALSO) OU (VERDADEIRO) ==> VERDADEIRO;
+
+        false ou true
+        (x == 10) ou (x != 3) ==> true;
+
+        false ou true ou true
+        (x == 10) ou (x != 3) ou (x >= 5) ==> true;
+
+        // Operadores OU e E juntos nas condições
+        (verdadeiro) e (verdadeiro) e (falso) e (verdadeiro) ==> falso;
+
+        verdadeiro ou falso
+                ((verdadeiro) e (verdadeiro) ou (falso) e (verdadeiro)) ==> verdadeiro;
+
+        // IF / ELSE
+
+        ### Controle de fluxo
+
+        Sintaxe simples
+
+        Executa sem verificar condicao
+        comandos
+        comandos
+        comandos
+
+        verdadeiro e verdadeiro
+        if (condicao) e (condicao) { --> se a condicao true executa os comendos dentro do { }
+        executa os comandos
+        executa os comandos
+        executa os comandos
+
+        }
+
+        Executa sem verificar condicao
+        comandos
+        comandos
+        comandos
+
+        ### Sintaxe composto
+        falso
+        if (condicao) { --> se a condicao for true executa os comandos dentro do {  }
+        executa os comandos
+        executa os comandos
+        executa os comandos
+        } else { --> se a condicao for falso bloco de comando do else { }
+        executa os comandos
+
+        }
+
+        ### Sintaxe encadeando varios if else if e else
+        falso
+        if (condicao) e (condicao) { --> se a condicao for true executa os comandos dentro do {  }
+        executa os comandos
+        executa os comandos
+        executa os comandos
+        } else if (condicao) ou (condicao) { --> se a condicao for true executa os comandos dentro do {  }
+        executa os comandos
+        executa os comandos
+        } else { --> se a condicao for falso executa o bloco de comando else {  }
+        executa os comandos
+    }
+
+}

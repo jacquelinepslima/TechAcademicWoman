@@ -1,0 +1,60 @@
+package exercicio.uri.alice_souza.util;
+
+public class ControleFluxo {
+    public static void main(String[] args) {
+        /* Operadores de comparação
+
+        Expressões lógicas
+        Tabela verdade
+
+       ***** Operador E , AND , &&
+        -> tem que ser tudo true pra dar true.
+        -> se um for falso, já dá falso.
+         (verdadeiro) && (verdadeiro) -> Verdadeiro
+         (verdadeiro) && (Falso) -> Falso
+         (Falso) && (verdadeiro) -> Falso
+         (Falso) && (verdadeiro) -> Falso
+
+       ***** Operador OU , OR , ||
+        (verdadeiro) || (verdadeiro) -> Verdadeiro
+        (verdadeiro) || (falso) -> Verdadeiro
+        (falso) || (verdadeiro) -> Verdadeiro
+        (falso) || (falso) -> falso
+
+        ### controle de fluxo
+
+        ***sintaxe simples
+
+        if(condição) {se a condição for verdadeira, executa os comandos:
+        comando1
+        comando2
+        comando3
+        }else { executa estes comandos se a condição for falsa
+        comando4
+        comando5
+        comando6}
+
+
+        ***sintaxe composta
+        IF, ELSE IF, ELSE
+
+       if(condição) {se a condição for verdadeira, executa os comandos:
+               comando1
+               comando2
+               comando3
+          }else if (condição2){ executa estes comandos se a condição2 for verdadeira
+               comando4
+               comando5
+               comando6}
+          else { executa estes se a condição e a condição2 forem falsas
+                comando7
+                comando8
+                comando9}
+        saiu do if, segue a vida normalmente
+        comando10
+        comando11
+        outro if else...
+
+         */
+    }
+}
